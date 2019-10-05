@@ -37,8 +37,8 @@ type Listener interface {
 type listener struct {
 	servers map[string]server.Server
 	eg      errgroup.Group
-	sus     []string
-	sds     []string
+	sus     []string // startup strategy
+	sds     []string // shutdown strategy
 	cancel  context.CancelFunc
 	ech     chan error
 	sddur   time.Duration
@@ -69,19 +69,11 @@ func (l *listener) ListenAndServe(ctx context.Context) <-chan error {
 		srv, ok := l.servers[name]
 
 		if !ok || srv == nil {
+			// TODO panic?
 			l.ech <- errors.ErrServerNotFound(name)
 			continue
 		}
 
-		if !l.servers[name].IsRunning() {
-			echs = append(echs, sinfo{
-				ech: l.servers[name].ListenAndServe(),
-				srv: l.servers[name],
-			})
-		}
-	}
-
-	for name := range l.servers {
 		if !l.servers[name].IsRunning() {
 			echs = append(echs, sinfo{
 				ech: l.servers[name].ListenAndServe(),

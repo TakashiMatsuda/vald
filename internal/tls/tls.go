@@ -29,7 +29,7 @@ import (
 type Config = tls.Config
 
 type credentials struct {
-	cfg  *tls.Config
+	cfg  *Config
 	cert string
 	key  string
 	ca   string
