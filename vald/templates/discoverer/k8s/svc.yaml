@@ -16,15 +16,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: discoverer-k8s
+  name: {{ .Values.discoverer.name }}
 spec:
-  ports:
-  - port: 8081
-    name: grpc
-  - port: 8080
-    name: rest
-  - port: 6060
-    name: pprof
+  {{- $servers := dict "Values" .Values.discoverer.server_config "default" .Values.defaults.server_config }}
+  {{- include "vald.servicePorts" $servers | nindent 2 }}
   selector:
-    app: discoverer-k8s
+    app: {{ .Values.discoverer.name }}
   clusterIP: None
