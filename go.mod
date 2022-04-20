@@ -81,7 +81,7 @@ require (
 	code.cloudfoundry.org/bytefmt v0.0.0-20211005130812-5bb3c17173e5
 	contrib.go.opencensus.io/exporter/jaeger v0.2.1
 	contrib.go.opencensus.io/exporter/prometheus v0.4.0
-	contrib.go.opencensus.io/exporter/stackdriver v0.13.8
+	contrib.go.opencensus.io/exporter/stackdriver v0.13.12
 	github.com/aws/aws-sdk-go v1.40.34
 	github.com/envoyproxy/protoc-gen-validate v0.1.0
 	github.com/fsnotify/fsnotify v1.5.1
@@ -134,8 +134,8 @@ require (
 
 require (
 	cloud.google.com/go v0.97.0 // indirect
-	cloud.google.com/go/monitoring v0.1.0 // indirect
-	cloud.google.com/go/trace v0.1.0 // indirect
+	cloud.google.com/go/monitoring v1.1.0 // indirect
+	cloud.google.com/go/trace v1.0.0 // indirect
 	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 // indirect
 	github.com/ajstarks/svgo v0.0.0-20210923152817-c3b6e2f0c527 // indirect
@@ -191,6 +191,7 @@ require (
 	github.com/prometheus/client_model v0.2.0 // indirect
 	github.com/prometheus/common v0.28.0 // indirect
 	github.com/prometheus/procfs v0.6.0 // indirect
+	github.com/prometheus/prometheus v2.5.0+incompatible // indirect
 	github.com/prometheus/statsd_exporter v0.21.0 // indirect
 	github.com/scylladb/go-reflectx v1.0.1 // indirect
 	github.com/spf13/cobra v1.1.3 // indirect
