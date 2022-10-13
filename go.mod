@@ -84,7 +84,7 @@ require (
 	contrib.go.opencensus.io/exporter/stackdriver v0.13.8
 	github.com/aws/aws-sdk-go v1.40.34
 	github.com/envoyproxy/protoc-gen-validate v0.1.0
-	github.com/fsnotify/fsnotify v1.5.1
+	github.com/fsnotify/fsnotify v1.6.0
 	github.com/go-redis/redis/v8 v8.11.4
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/gocql/gocql v0.0.0-20200131111108-92af2e088537
@@ -114,7 +114,7 @@ require (
 	golang.org/x/net v0.0.0-20210825183410-e898025ed96a
 	golang.org/x/oauth2 v0.0.0-20211005180243-6b3c2da341f1
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
-	golang.org/x/sys v0.0.0-20211007075335-d3039528d8ac
+	golang.org/x/sys v0.0.0-20220908164124-27713097b956
 	golang.org/x/tools v0.1.8-0.20211022200916-316ba0b74098
 	gonum.org/v1/hdf5 v0.0.0-20210714002203-8c5d23bc6946
 	gonum.org/v1/plot v0.10.0
